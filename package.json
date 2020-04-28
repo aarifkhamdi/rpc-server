@@ -1,0 +1,27 @@
+{
+  "name": "rpc-server",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "repository": "https://github.com/aarifkhamdi/rpc-server",
+  "author": "aarifkhamdi <aarifkhamdi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "@types/uuid": "^7.0.3",
+    "@types/ws": "^7.2.4",
+    "nodaemon": "^0.0.5",
+    "nodemon": "^2.0.3",
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "start_server": "nodemon --watch 'server.ts' --exec node -r ts-node/register server.ts",
+    "start_server_debug": "nodemon --inspect-brk --watch 'server.ts' --exec node -r ts-node/register server.ts",
+    "start_client": "nodemon --watch 'client.ts' --exec node -r ts-node/register client.ts",
+    "start_client_debug": "nodemon --inspect-brk=127.0.0.1:9228 --watch 'client.ts' --exec node -r ts-node/register client.ts"
+  },
+  "dependencies": {
+    "uuid": "^7.0.3",
+    "ws": "^7.2.5"
+  }
+}
